@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpParams} from '@angular/common/http';
+import { YoutubeResponse } from '../models/youtube.models';
 
 @Injectable({
   providedIn: 'root'
@@ -25,6 +26,6 @@ private nextPageToken= '';
       .set('playlistId', this.playlist)
       .set('Key', this.apikey)
 
-    return this.http.get(url, {params});
+    return this.http.get<YoutubeResponse>(url, {params});
   }
 }

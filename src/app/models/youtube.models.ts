@@ -10,14 +10,14 @@ export interface Item {
     kind:    ItemKind;
     etag:    string;
     id:      string;
-    snippet: video;
+    snippet: Video;
 }
 
 export enum ItemKind {
     YoutubePlaylistItem = "youtube#playlistItem",
 }
 
-export interface video {
+export interface Video {
     publishedAt:  Date;
     channelId:    ChannelID;
     title:        string;

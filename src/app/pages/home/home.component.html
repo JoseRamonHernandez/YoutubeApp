@@ -9,7 +9,9 @@
       <p class="card-text"><strong>Autor:</strong>{{video.channelTitle}}</p>
       <p class="card-text"><strong>Publicado:</strong>{{video.publishedAt | date}}</p>
 
-      <button class="btn btn-outline-primary btn-block" >Ver video</button>
+      <button class="btn btn-outline-primary btn-block"
+       (click)="mostrarVideo(video)">
+       Ver video</button>
 
     </div>
   </div>

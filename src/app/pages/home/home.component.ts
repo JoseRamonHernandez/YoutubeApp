@@ -16,14 +16,18 @@ videos: Video[] = []
   constructor(private YoutubeService: YoutubeService) { }
 
   ngOnInit(){
-    this.YoutubeService.getVideos()
-        .subscribe( resp => {
-
-          this.videos.push(...resp);
-          console.log(this.videos);
-        });
+    this.cargarVideos();
   }
+cargarVideos()
+{
+  this.YoutubeService.getVideos()
+      .subscribe( resp => {
 
+        this.videos.push(...resp);
+        console.log(this.videos);
+      });
+
+}
 mostrarVideo(video: Video)
 {
 

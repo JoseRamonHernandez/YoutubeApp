@@ -9,7 +9,7 @@
             <p class="card-text"><strong>Autor:</strong>{{video.channelTitle}}</p>
             <p class="card-text"><strong>Publicado:</strong>{{video.publishedAt | date}}</p>
 
-            <button class="btn btn-outline-primary btn-block" (click)="mostrarVideo(videos)">
+            <button class="btn btn-outline-primary btn-block" (click)="mostrarVideo(video)">
        Ver video</button>
 
         </div>
@@ -17,6 +17,6 @@
 </div>
 <div class="row mt-5 mb-5 text-center">
     <div class="col">
-        <button class="btn btn-primary btn-lg " (click)="cargarVideos(video)">Siguiente Pagina</button>
+        <a class="waves-effect waves-light btn-large red darken-1  col s12">Ver mas videos</a>
     </div>
 </div>
